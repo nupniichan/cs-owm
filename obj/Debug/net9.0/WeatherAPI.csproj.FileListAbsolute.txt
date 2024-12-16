@@ -1,0 +1,17 @@
+C:\Users\nup\source\repos\WeatherAPI\WeatherAPI\bin\Debug\net9.0\WeatherAPI.exe
+C:\Users\nup\source\repos\WeatherAPI\WeatherAPI\bin\Debug\net9.0\WeatherAPI.deps.json
+C:\Users\nup\source\repos\WeatherAPI\WeatherAPI\bin\Debug\net9.0\WeatherAPI.runtimeconfig.json
+C:\Users\nup\source\repos\WeatherAPI\WeatherAPI\bin\Debug\net9.0\WeatherAPI.dll
+C:\Users\nup\source\repos\WeatherAPI\WeatherAPI\bin\Debug\net9.0\WeatherAPI.pdb
+C:\Users\nup\source\repos\WeatherAPI\WeatherAPI\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\Users\nup\source\repos\WeatherAPI\WeatherAPI\obj\Debug\net9.0\WeatherAPI.csproj.AssemblyReference.cache
+C:\Users\nup\source\repos\WeatherAPI\WeatherAPI\obj\Debug\net9.0\WeatherAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nup\source\repos\WeatherAPI\WeatherAPI\obj\Debug\net9.0\WeatherAPI.AssemblyInfoInputs.cache
+C:\Users\nup\source\repos\WeatherAPI\WeatherAPI\obj\Debug\net9.0\WeatherAPI.AssemblyInfo.cs
+C:\Users\nup\source\repos\WeatherAPI\WeatherAPI\obj\Debug\net9.0\WeatherAPI.csproj.CoreCompileInputs.cache
+C:\Users\nup\source\repos\WeatherAPI\WeatherAPI\obj\Debug\net9.0\WeatherAPI.csproj.Up2Date
+C:\Users\nup\source\repos\WeatherAPI\WeatherAPI\obj\Debug\net9.0\WeatherAPI.dll
+C:\Users\nup\source\repos\WeatherAPI\WeatherAPI\obj\Debug\net9.0\refint\WeatherAPI.dll
+C:\Users\nup\source\repos\WeatherAPI\WeatherAPI\obj\Debug\net9.0\WeatherAPI.pdb
+C:\Users\nup\source\repos\WeatherAPI\WeatherAPI\obj\Debug\net9.0\WeatherAPI.genruntimeconfig.cache
+C:\Users\nup\source\repos\WeatherAPI\WeatherAPI\obj\Debug\net9.0\ref\WeatherAPI.dll
