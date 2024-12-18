@@ -12,7 +12,7 @@ class Program
         var weatherService = new WeatherService(api);
 
         // Example location
-        var location = "Ho Chi Minh City";
+        var location = "Tokyo";
 
         // Get data
         var weatherData = await weatherService.GetWeatherDataAsync(location);
@@ -21,7 +21,7 @@ class Program
         if (weatherData != null)
         {
             Console.WriteLine($"Current weather in {location} - Latitude: [{weatherData.coord.Longitude}] Longitude: [{weatherData.coord.Latitude}]:");
-            Console.WriteLine($"Current datetime: {weatherData.Date} - {weatherData.Hour}:{weatherData.Minutes}");
+            Console.WriteLine($"Current country datetime: {weatherData.localTime} ({weatherData.localTime})");
             Console.WriteLine($"Weather:");
             Console.WriteLine($"Temperature: {weatherData.main.temp}°C feel like {weatherData.main.feels_like}°C");
             Console.WriteLine($"Pressure: {weatherData.main.pressure} hPa");
