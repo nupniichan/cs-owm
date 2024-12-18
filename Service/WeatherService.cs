@@ -54,7 +54,8 @@ public class WeatherService
                 {
                     id = weatherDataResponse.weather[0].id,
                     main = weatherDataResponse.weather[0].main,
-                    description = weatherDataResponse.weather[0].description
+                    description = weatherDataResponse.weather[0].description,
+                    icon = weatherDataResponse.weather[0].icon
                 },
                 main = new DetailsWeather
                 {
@@ -83,5 +84,10 @@ public class WeatherService
             Console.WriteLine("Error fetching weather data: " + ex.Message);
             return null;
         }
+    }
+    public string GetWeatherIconUrl(string iconCode)
+    {
+        const string baseUrl = "https://openweathermap.org/img/wn/";
+        return $"{baseUrl}{iconCode}@2x.png";
     }
 }
