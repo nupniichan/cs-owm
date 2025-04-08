@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>cs-owm</id>
+    <version>1.0.0</version>
+    <title>cs-owm</title>
+    <authors>cs-owm</authors>
+    <license type="file">LICENSE.txt</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/nupniichan/cs-owm</projectUrl>
+    <description>A simple library using OpenWeatherMap to get data</description>
+    <repository type="git" url="https://github.com/nupniichan/cs-owm" commit="00ca677b1e93b655be806479a6314432c3f59dc8" />
+    <dependencies>
+      <group targetFramework="net9.0">
+        <dependency id="Newtonsoft.Json" version="13.0.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Programming\API\cs-owm\bin\Debug\net9.0\cs-owm.dll" target="lib\net9.0\cs-owm.dll" />
+    <file src="D:\Programming\API\cs-owm\LICENSE.txt" target="\LICENSE.txt" />
+    <file src="D:\Programming\API\cs-owm\README.md" target="\README.md" />
+  </files>
+</package>

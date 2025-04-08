@@ -1,0 +1,13 @@
+D:\Programming\API\cs-owm\bin\Debug\net9.0\cs-owm.deps.json
+D:\Programming\API\cs-owm\bin\Debug\net9.0\cs-owm.dll
+D:\Programming\API\cs-owm\bin\Debug\net9.0\cs-owm.pdb
+D:\Programming\API\cs-owm\obj\Debug\net9.0\cs-owm.csproj.AssemblyReference.cache
+D:\Programming\API\cs-owm\obj\Debug\net9.0\cs-owm.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\API\cs-owm\obj\Debug\net9.0\cs-owm.AssemblyInfoInputs.cache
+D:\Programming\API\cs-owm\obj\Debug\net9.0\cs-owm.AssemblyInfo.cs
+D:\Programming\API\cs-owm\obj\Debug\net9.0\cs-owm.csproj.CoreCompileInputs.cache
+D:\Programming\API\cs-owm\obj\Debug\net9.0\cs-owm.sourcelink.json
+D:\Programming\API\cs-owm\obj\Debug\net9.0\cs-owm.dll
+D:\Programming\API\cs-owm\obj\Debug\net9.0\refint\cs-owm.dll
+D:\Programming\API\cs-owm\obj\Debug\net9.0\cs-owm.pdb
+D:\Programming\API\cs-owm\obj\Debug\net9.0\ref\cs-owm.dll
