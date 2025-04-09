@@ -8,7 +8,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	
 	<PackageId>cs-owm</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Title>cs-owm</Title>
     <Description>A simple library using OpenWeatherMap to get data</Description>
     <PackageProjectUrl>https://github.com/nupniichan/cs-owm</PackageProjectUrl>
