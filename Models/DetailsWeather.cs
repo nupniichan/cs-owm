@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WeatherAPI.Models
+namespace CsOwm.Models
 {
     public class DetailsWeather
     {

@@ -1,4 +1,4 @@
-﻿using WeatherAPI.Models;
+﻿using CsOwm.Models;
 
 public class WeatherData
 {
