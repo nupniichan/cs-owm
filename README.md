@@ -1,10 +1,10 @@
 <div align="center">
 
-# CS-OWM (Csharp-OpenWeatherMap)
+# CS-OWM (CSharp OpenWeatherMap)
 
 [![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=.net&logoColor=white)](https://dotnet.microsoft.com/) [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-*A simple C# application that uses the OpenWeatherMap API to fetch weather information for a specific location.*
+*A C# library for integrating with the OpenWeatherMap API to fetch detailed weather information for any location.*
 </div>
 
 ---
@@ -21,12 +21,14 @@
 ---
 
 ## 📢 Introduction
-This application uses the OpenWeatherMap API to retrieve weather data based on a city's name and displays details such as:
+This library provides a simple way to integrate with the OpenWeatherMap API in your C# applications. It offers comprehensive weather data retrieval including:
 - 🌡️ Temperature and "feels like" temperature
 - 💧 Humidity
-- 🌬️ Wind speed and direction
+- 🌬️ Wind speed, direction, and gusts
 - 🌫️ Visibility
-- 🌤️ Weather status
+- 🌤️ Weather status with icon support
+- 📍 Location coordinates
+- 🕒 Local time with timezone offset
 
 ---
 
@@ -34,49 +36,85 @@ This application uses the OpenWeatherMap API to retrieve weather data based on a
 - .NET SDK 6.0 or higher
 - OpenWeatherMap API Key
 - Internet connection
+- Newtonsoft.Json package
 
 ---
 
 ## ⚙️ How to Use
-Run the application to get the current weather information for a city (e.g., Ho Chi Minh City):
+
+### 1. Install the Package
 ```bash
-$ dotnet run
+dotnet add package CsOwm
 ```
 
-### Example Output:
+### 2. Initialize the Service
+```csharp
+using CsOwm.Service;
+
+// Initialize the service with your API key
+var weatherService = new CsOwmService("YOUR_API_KEY");
 ```
-Current weather in Ho Chi Minh City - Latitude: [10.8231] Longitude: [106.6297]:
-Current datetime: 16-12-2024 - 10:30
-Weather:
-Temperature: 30.5°C feel like 35.0°C
-Pressure: 1012 hPa
-Humidity: 65%
-Sea level: 1013 hPa - Ground level: 1010 hPa
-Visibility: 10 km
-Wind:
-Wind speed: 3.5 m/s
-Wind degrees: 180°
-Wind gust: 5.0 m/s
-Cloud:
-Cloudiness: 20%
-Status: Clear - clear sky
+
+### 3. Get Weather Data
+```csharp
+// Get weather data for a location
+var weatherData = await weatherService.GetWeatherDataAsync("City Name");
+
+// Get weather icon URL
+var iconUrl = weatherService.GetWeatherIconUrl(weatherData.weather.icon);
+```
+
+### Example Usage:
+```csharp
+using CsOwm.Service;
+using CsOwm.Models;
+
+public class WeatherApp
+{
+    private readonly CsOwmService _weatherService;
+
+    public WeatherApp(string apiKey)
+    {
+        _weatherService = new CsOwmService(apiKey);
+    }
+
+    public async Task DisplayWeather(string location)
+    {
+        var weatherData = await _weatherService.GetWeatherDataAsync(location);
+        
+        Console.WriteLine($"Current weather in {location} - Latitude: [{weatherData.coord.Latitude}] Longitude: [{weatherData.coord.Longitude}]");
+        Console.WriteLine($"Current datetime: {weatherData.localTime}");
+        Console.WriteLine($"Weather:");
+        Console.WriteLine($"Temperature: {weatherData.main.temp}°C feel like {weatherData.main.feels_like}°C");
+        Console.WriteLine($"Pressure: {weatherData.main.pressure} hPa");
+        Console.WriteLine($"Humidity: {weatherData.main.humidity}%");
+        Console.WriteLine($"Sea level: {weatherData.main.sea_level} hPa - Ground level: {weatherData.main.grnd_level} hPa");
+        Console.WriteLine($"Visibility: {weatherData.Visibility} km");
+        Console.WriteLine($"Wind:");
+        Console.WriteLine($"Wind speed: {weatherData.wind.speed} m/s");
+        Console.WriteLine($"Wind degrees: {weatherData.wind.deg}°");
+        Console.WriteLine($"Wind gust: {weatherData.wind.gust} m/s");
+        Console.WriteLine($"Cloud:");
+        Console.WriteLine($"Cloudiness: {weatherData.clouds.all}%");
+        Console.WriteLine($"Status: {weatherData.weather.main} - {weatherData.weather.description}");
+    }
+}
 ```
 
 ---
 
 ## 📂 Project Structure
 ```
-WeatherApp/
-├── Program.cs                // The main entry point of the application
-├── WeatherService.cs         // Service to call OpenWeatherMap API
+cs-owm/
+├── Service/
+│   └── CsOwmService.cs        // Service for OpenWeatherMap API integration
 ├── Models/
-│   ├── WeatherData.cs        // Class for weather data
-│   ├── Coord.cs              // Class for location data
-│   ├── Weather.cs            // Class for weather status
-│   ├── DetailsWeather.cs     // Class for detailed temperature and pressure data
-│   ├── Wind.cs               // Class for wind data
-│   └── Clouds.cs             // Class for cloud data
-└── ...              // Project documentation
+    ├── WeatherData.cs         // Main weather data model
+    ├── Coord.cs               // Location coordinates
+    ├── Weather.cs             // Weather status and description
+    ├── DetailsWeather.cs      // Temperature and pressure details
+    ├── Wind.cs                // Wind information
+    └── Clouds.cs              // Cloud coverage data
 ```
 
 ---
@@ -86,18 +124,18 @@ WeatherApp/
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/nupniichan/cs-owm.git
-cd WeatherApp
+cd cs-owm
 ```
 
-### 2. Add Your OpenWeatherMap API Key
-- Open `Program.cs` and replace `YOUR_API_KEY_HERE` with your API key.
-```csharp
-string api = "YOUR_API_KEY_HERE";
-```
-
-### 3. Run the Application
+### 2. Build the Library
 ```bash
-dotnet run
+dotnet build
+```
+
+### 3. Add to Your Project
+Add a reference to the library in your project:
+```bash
+dotnet add reference path/to/cs-owm
 ```
 
 ---
